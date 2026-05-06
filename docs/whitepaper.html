@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hashran Whitepaper | Protocol Order</title>
+  <meta name="description" content="Protocol Orderのゲーム内プロトコルHashranとHashranトークン（HASRNTK）に関する架空ホワイトペーパーです。" />
+  <meta property="og:title" content="Hashran Whitepaper | Protocol Order" />
+  <meta property="og:description" content="HASRNTK、Gas、ウォレット分離、CEX/DEX、ブロック生成、合意体系を整理したゲーム内架空仕様書。" />
+  <meta property="og:image" content="assets/protocol-order-banner.jpeg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css?v=4" />
+</head>
+<body class="whitepaper-page">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header" data-elevated="false">
+    <a class="brand" href="index.html#top" aria-label="Protocol Order top">
+      <img src="assets/protocol-order-icon.jpeg" alt="Protocol Order icon" />
+      <span>Protocol Order</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="メニューを開閉">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#concept">Concept</a>
+      <a href="index.html#world">World</a>
+      <a href="index.html#gameplay">Gameplay</a>
+      <a href="index.html#music">Music</a>
+      <a href="whitepaper.html" aria-current="page">Whitepaper</a>
+      <a href="http://x.com/ProtocolOrder" target="_blank" rel="noreferrer">Official X</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="whitepaper-hero section-frame" aria-labelledby="whitepaper-title">
+      <div class="whitepaper-hero-bg"></div>
+      <div class="whitepaper-hero-content">
+        <p class="eyebrow">Protocol Order / In-universe Whitepaper</p>
+        <h1 id="whitepaper-title">Hashranチェーン / Hashranトークン（HASRNTK）ホワイトペーパー</h1>
+        <p class="hero-copy">
+          Hashran世界における基軸トークン、Gas、ウォレット運用、取引所、ブロック生成、合意体系を整理したゲーム内プロトコル仕様書です。
+        </p>
+        <div class="document-meta glass-card">
+          <dl>
+            <div><dt>Document Type</dt><dd>Fictional In-game Protocol</dd></div>
+            <div><dt>Asset</dt><dd>HASRNTK</dd></div>
+            <div><dt>Status</dt><dd>Teaser Publication Draft</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section whitepaper-layout">
+      <aside class="whitepaper-toc glass-card" aria-label="Table of contents">
+        <p class="eyebrow">Contents</p>
+        <a href="#notice">0. 重要な注意事項</a>
+        <a href="#abstract">1. 概要</a>
+        <a href="#token">5. Hashranトークン</a>
+        <a href="#economy">6. 経済システム</a>
+        <a href="#cultivation">7. ブロック生成</a>
+        <a href="#security">8. セキュリティ</a>
+        <a href="#roadmap">9. ロードマップ</a>
+        <a href="#disclaimer">10. 免責</a>
+        <a href="#oral-code">付録. Hashranの十二戒</a>
+      </aside>
+
+      <article class="whitepaper-document">
+        <section id="notice" class="paper-block alert-block">
+          <p class="eyebrow">Important Notice</p>
+          <h2>重要な注意事項</h2>
+          <p>
+            このホワイトペーパーおよびHashranトークン（HASRNTK）というブロックチェーンプロトコルは、ゲーム『Protocol Order』の世界観を説明するための架空設定です。実在するブロックチェーン、暗号資産、金融商品、投資プロジェクト、トークン発行計画、ウォレットサービスとは一切関係ありません。
+          </p>
+          <p>
+            HASRNTKを含むゲーム内資産は現実世界での換金、交換、払戻し、二次流通、外部価値連動を前提としません。本ページは投資勧誘、資産形成助言、金融商品の説明を目的としません。
+          </p>
+        </section>
+
+        <section id="abstract" class="paper-block">
+          <p class="eyebrow">Abstract</p>
+          <h2>1. 概要</h2>
+          <p>
+            Hashranチェーンは、ゲーム内都市Hashranの経済活動、記録、検証、秩序維持を表現する架空の基盤台帳です。Hashranトークン（HASRNTK）は、Gas、基軸通貨、報酬資産、セキュリティ資源として機能し、戦闘、育成、取引、ウォレット管理を一つの意思決定体系へ接続します。
+          </p>
+          <p>
+            本仕様は、専門知識の説明ではなく、プレイヤーの判断とリスク管理をゲーム体験へ変換するための設計資料です。
+          </p>
+        </section>
+
+        <section id="token" class="paper-block">
+          <p class="eyebrow">Token Model</p>
+          <h2>5. Hashranトークン（HASRNTK）</h2>
+
+          <h3>5.1 役割</h3>
+          <div class="paper-grid four">
+            <div><strong>Gas</strong><span>チェーン上の操作に必要な利用料。</span></div>
+            <div><strong>基軸通貨</strong><span>ゲーム内の交換レート・評価の基準。</span></div>
+            <div><strong>報酬資産</strong><span>戦闘勝利やブロック生成により獲得する基本報酬。</span></div>
+            <div><strong>セキュリティ資源</strong><span>ネットワーク運用コストを担保し、スパム的行動を抑制。</span></div>
+          </div>
+
+          <h3>5.2 獲得手段</h3>
+          <table class="paper-table">
+            <thead><tr><th>獲得経路</th><th>内容</th></tr></thead>
+            <tbody>
+              <tr><td>戦闘勝利報酬</td><td>経験値・ドロップと並ぶ基礎報酬として付与される。</td></tr>
+              <tr><td>ブロック生成（育成）</td><td>Tierポイント獲得に加え、低確率エアドロップとして付与される。</td></tr>
+              <tr><td>取引</td><td>ゲーム内取引所（CEX/DEX）を介した交換・流動性供給により獲得する。</td></tr>
+            </tbody>
+          </table>
+
+          <h3>5.3 消費手段</h3>
+          <table class="paper-table">
+            <thead><tr><th>消費経路</th><th>内容</th></tr></thead>
+            <tbody>
+              <tr><td>送金</td><td>ウォレット間移動、対プレイヤー/対NPC送金。</td></tr>
+              <tr><td>取引</td><td>交換（スワップ）、清算、手数料。</td></tr>
+              <tr><td>契約</td><td>オンチェーン処理、戦闘関連の特殊処理、経済スキル等の実行。</td></tr>
+              <tr><td>税・公課</td><td>ゲーム内での課税イベントにおける納付。</td></tr>
+            </tbody>
+          </table>
+
+          <h3>5.4 価格と換金性</h3>
+          <p>
+            HASRNTKはゲーム内資産であり、現実世界での換金価値を前提としません。ゲーム内レートはバランス調整のために制御され、現実の市場価格を参照しません。
+          </p>
+        </section>
+
+        <section id="economy" class="paper-block">
+          <p class="eyebrow">Economic Layer</p>
+          <h2>6. 経済システムとの接続</h2>
+
+          <h3>6.1 メインウォレット / サブウォレット運用</h3>
+          <p>
+            メインウォレットは基軸資産の集約と長期保管を担います。サブウォレットは短期運用、戦闘、取引、レバレッジの実行口座として機能します。資金移動にはGasが発生し、反映まで時間がかかる場合があります。
+          </p>
+
+          <h3>6.2 取引所（CEX/DEX）と流動性</h3>
+          <p>
+            ゲーム内には取引所が存在し、通貨間の交換が可能です。ただし、交換の成立には流動性が必要であり、状況によっては希望レートで約定しません。この設計により、資産移動と戦闘準備に現実的な制約が生じます。
+          </p>
+
+          <h3>6.3 レバレッジ（証拠金）</h3>
+          <p>
+            戦闘開始時にレバレッジON/OFFを選択し、ON時は証拠金への投入量を決定します。戦闘中に証拠金を増減してレバレッジを調整する行為はできません。この制約により、事前の資金設計が戦術の一部となります。
+          </p>
+        </section>
+
+        <section id="cultivation" class="paper-block">
+          <p class="eyebrow">Cultivation Layer</p>
+          <h2>7. ブロック生成（育成）との接続</h2>
+          <p>
+            プレイヤーはブロック生成を通じてTierポイントを獲得し、成長・解放の進行度を管理します。ブロック生成の成果として、低確率でHASRNTKがエアドロップされます。
+          </p>
+          <p>
+            方針は「適当に育てても収穫できるが、丁寧に育てるほうが実りが多い」です。放置と能動プレイを両立させ、育成を攻略上の義務ではなく、帰還後の緩衝材として機能させます。
+          </p>
+        </section>
+
+        <section id="security" class="paper-block">
+          <p class="eyebrow">Security Model</p>
+          <h2>8. セキュリティと不正対策</h2>
+          <div class="paper-grid two">
+            <div><strong>Gasによる摩擦</strong><span>スパム行動を抑止する。</span></div>
+            <div><strong>遅延によるリスク管理</strong><span>資金移動の乱用を抑止し、判断ミスをコスト化する。</span></div>
+            <div><strong>合意の重み</strong><span>過去改ざんを「理論上可能だが割に合わない」状態に置く。</span></div>
+            <div><strong>可変合意（MCP）</strong><span>異常時に合意形態を遷移させ、破局を回避する。</span></div>
+          </div>
+        </section>
+
+        <section id="roadmap" class="paper-block">
+          <p class="eyebrow">Implementation Roadmap</p>
+          <h2>9. ロードマップ（ゲーム内実装の段階）</h2>
+          <div class="phase-list">
+            <div><span>Phase 1</span><p>基軸トークン、Gas、ウォレット分離、基本的な送金・交換の導入。</p></div>
+            <div><span>Phase 2</span><p>取引所（CEX/DEX）、流動性、レバレッジ、リスク管理UIの実装。</p></div>
+            <div><span>Phase 3</span><p>MCP（可変合意）の物語的回収、記録ログによるDCAの示唆。</p></div>
+            <div><span>Phase 4</span><p>シリーズ拡張（Ⅱ・Ⅲ）での合意体系の深化（構成可能性／解釈依存）。</p></div>
+          </div>
+        </section>
+
+        <section id="disclaimer" class="paper-block">
+          <p class="eyebrow">Disclaimer</p>
+          <h2>10. 免責</h2>
+          <p>
+            本書はゲーム内プロトコルの仕様説明を目的とし、投資勧誘、資産形成助言、金融商品の説明を意図しません。HASRNTKを含む一切のゲーム内資産は、現実世界の金融資産とは異なります。
+          </p>
+        </section>
+
+        <section id="oral-code" class="paper-block oral-code">
+          <p class="eyebrow">Appendix / Oral Tradition</p>
+          <h2>住民口伝版：Hashranの十二戒</h2>
+          <p class="paper-lead">分類：生活規範（簡易版／口伝）</p>
+          <div class="commandments-grid">
+            <article><span>第一戒</span><h3>聖域は他人に見せるな</h3><p>財布（聖域）は覗かせるな。見せた瞬間に、運は逃げる。</p></article>
+            <article><span>第二戒</span><h3>魂の刻印は渡すな</h3><p>署名の印は身体の一部。貸せば人生ごと持っていかれる。</p></article>
+            <article><span>第三戒</span><h3>復活の呪文は唱えるな</h3><p>十二の言葉は最後の最後まで封じよ。口にした回数だけ、呪いは近づく。</p></article>
+            <article><span>第四戒</span><h3>供物なしに魔法を放つな</h3><p>供物（触媒）を惜しむな。惜しめば、肝心な時に何も動かない。</p></article>
+            <article><span>第五戒</span><h3>大金は奥へ、小銭は手元へ</h3><p>大事なものは奥の聖域へ。今日使う分だけを手元の袋へ。</p></article>
+            <article><span>第六戒</span><h3>移すなら早めに移せ</h3><p>袋の移し替えには時間がかかる。戦いの前に慌てるな。</p></article>
+            <article><span>第七戒</span><h3>1日に一回、祈りを天に届けよ</h3><p>日が沈む前に、今日の出来事を束ね、天へ送れ。天は見ている。返事がなくても、送れ。</p></article>
+            <article><span>第八戒</span><h3>祈りは一人で行うな</h3><p>祈る者の隣に、見届ける者を置け。見届けがなければ、祈りは歪む。</p></article>
+            <article><span>第九戒</span><h3>祈りの記録を残せ</h3><p>祈った証は、地区の箱に収めよ。箱が空になれば、町は迷う。</p></article>
+            <article><span>第十戒</span><h3>契りは軽々しく交わすな</h3><p>誓約は精霊が勝手に執行する。破りたくなっても破れない。</p></article>
+            <article><span>第十一戒</span><h3>安い近道を信じるな</h3><p>甘い儲け話は帳尻が合わない。正門を通れ。</p></article>
+            <article><span>第十二戒</span><h3>世界の記録を疑うな</h3><p>記録は石積み。壊すのは簡単だが、積み直すのは現実的ではない。</p></article>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Protocol Order. All rights reserved.</p>
+    <p><a href="index.html">Teaser Site</a> / Official X: <a href="http://x.com/ProtocolOrder" target="_blank" rel="noreferrer">http://x.com/ProtocolOrder</a></p>
+    <p>Contact: <a href="mailto:protocolorderofficial@gmail.com">protocolorderofficial@gmail.com</a></p>
+    <p class="footer-note">本ページはゲーム内架空設定としてのホワイトペーパーです。掲載内容・実装範囲・表現は開発状況により変更される場合があります。</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

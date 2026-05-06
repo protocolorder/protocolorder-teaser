@@ -1,12 +1,254 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>Protocol Order</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Protocol Order | Official Teaser</title>
+  <meta name="description" content="Protocol Orderは、台帳・検証・信頼・秩序をテーマにしたストーリー主導型RPG／カードバトルゲームです。" />
+  <meta property="og:title" content="Protocol Order | Official Teaser" />
+  <meta property="og:description" content="台帳の異常を修復し、都市Hashranの秩序を取り戻すストーリー主導型RPG。" />
+  <meta property="og:image" content="assets/protocol-order-banner.jpeg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
-  <h1>Protocol Order</h1>
-  <p>Teaser site renewal in progress.</p>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header" data-elevated="false">
+    <a class="brand" href="#top" aria-label="Protocol Order top">
+      <img src="assets/protocol-order-icon.jpeg" alt="Protocol Order icon" />
+      <span>Protocol Order</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="メニューを開閉">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#concept">Concept</a>
+      <a href="#world">World</a>
+      <a href="#gameplay">Gameplay</a>
+      <a href="#music">Music</a>
+      <a href="whitepaper.html">Whitepaper</a>
+      <a href="#release">Release</a>
+      <a href="http://x.com/ProtocolOrder" target="_blank" rel="noreferrer">Official X</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-frame" aria-labelledby="hero-title">
+      <div class="hero-bg" role="img" aria-label="Protocol Order blue sci-fi banner"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Story-driven RPG / Lane Card Battle / Steam</p>
+        <h1 id="hero-title">記録は、秩序か。<br />それとも、呪いか。</h1>
+        <p class="hero-copy">
+          台帳に残された欠損を読み解き、過去ブロックの歪みを修復する。
+          「記録・検証・信頼・秩序」を、戦術、育成、都市導線へ変換したストーリー主導型RPG。
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <button class="button primary is-disabled" type="button" disabled>Gameplay準備中</button>
+          <a class="button ghost" href="#concept">Enter Hashran</a>
+          <a class="button ghost" href="whitepaper.html">Hashran Whitepaper</a>
+          <a class="button ghost" href="http://x.com/ProtocolOrder" target="_blank" rel="noreferrer">Official X</a>
+        </div>
+        <ul class="platform-strip" aria-label="Project tags">
+          <li>Offline Game</li>
+          <li>No NFT / No P2E</li>
+          <li>Steam Planned</li>
+          <li>Windows / macOS</li>
+        </ul>
+      </div>
+      <div class="hero-card glass-card" aria-label="Game identity card">
+        <img src="assets/protocol-order-icon.jpeg" alt="Protocol Order logo mark" />
+        <dl>
+          <div><dt>Genre</dt><dd>Story-driven RPG</dd></div>
+          <div><dt>Battle</dt><dd>Lane Card Battle</dd></div>
+          <div><dt>Theme</dt><dd>Ledger / Trust / Order</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="concept" class="content-section concept">
+      <div class="section-heading">
+        <p class="eyebrow">Concept</p>
+        <h2>もしも、ブロックチェーンの上に一つの世界があったら。</h2>
+      </div>
+      <div class="two-column">
+        <p>
+          Protocol Orderは、ブロックチェーンを投資や投機ではなく、記録をどう信頼し、誰が検証し、秩序をどう維持するかという構造的テーマとして扱う作品です。
+          プレイヤーは専門知識を前提とせず、台帳を読む、案件を選ぶ、Gasを管理する、カードを配置する、報酬を育成へ回すという行動を通じて、世界の仕組みを体験します。
+        </p>
+        <div class="notice-card">
+          <h3>Important Positioning</h3>
+          <p>
+            本作は通常の買い切り型オフラインゲームです。暗号資産、NFT、P2E、外部ウォレット接続、外部チェーン連携、換金・交換・払戻し機能は実装しません。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section whitepaper-teaser section-frame" aria-labelledby="whitepaper-teaser-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Hashran Protocol</p>
+        <h2 id="whitepaper-teaser-title">架空プロトコルとしてのHashranを読む。</h2>
+        <p>
+          HASRNTK、Gas、ウォレット分離、CEX/DEX、ブロック生成、合意体系を、ゲーム内世界の仕様書として整理したホワイトペーパーを掲載しています。
+        </p>
+      </div>
+      <div class="teaser-actions">
+        <a class="button primary" href="whitepaper.html">Read Whitepaper</a>
+        <a class="button ghost" href="http://x.com/ProtocolOrder" target="_blank" rel="noreferrer">Official X</a>
+      </div>
+    </section>
+
+    <section id="world" class="content-section world">
+      <div class="section-heading compact">
+        <p class="eyebrow">World</p>
+        <h2>Hashran — 台帳によって維持される神域都市。</h2>
+        <p>
+          中央都市と12のディストリクトで構成されるHashran。住民の困りごとは、台帳の奥に眠る記録の歪みとして残されている。
+        </p>
+      </div>
+      <div class="world-grid">
+        <article class="glass-card feature-card">
+          <span class="card-index">01</span>
+          <h3>Restorer</h3>
+          <p>主人公は過去ブロックを読み解く修復士。失われた記録の背景を翻訳し、住民へ返す。</p>
+        </article>
+        <article class="glass-card feature-card">
+          <span class="card-index">02</span>
+          <h3>Ledger Salon</h3>
+          <p>案件、記録、異常が集まる台帳管理サロン。世界の深層へ潜るための中核施設。</p>
+        </article>
+        <article class="glass-card feature-card">
+          <span class="card-index">03</span>
+          <h3>12 Districts</h3>
+          <p>各区画で生活課題を解決し、1音の記録を回収する。12音が揃うと復元儀式が解放される。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gameplay" class="content-section gameplay">
+      <div class="section-heading">
+        <p class="eyebrow">Gameplay</p>
+        <h2>台帳を読み、Gasを配分し、レーン上で秩序を修復する。</h2>
+      </div>
+      <div class="loop-panel">
+        <div class="loop-step">
+          <span>01</span>
+          <h3>Read the Ledger</h3>
+          <p>案件一覧から異常を選び、戦闘前の制約と目的を把握する。</p>
+        </div>
+        <div class="loop-step">
+          <span>02</span>
+          <h3>Prepare Chain & Tokens</h3>
+          <p>チェーンと通貨カードの相性を考え、戦術の基盤を組む。</p>
+        </div>
+        <div class="loop-step">
+          <span>03</span>
+          <h3>Spend Gas</h3>
+          <p>配置、攻撃、スキルにGasを使い、限られた行動資源で最適解を探る。</p>
+        </div>
+        <div class="loop-step">
+          <span>04</span>
+          <h3>Restore & Grow</h3>
+          <p>戦闘報酬を育成へ反映し、次の案件へ進むための準備を整える。</p>
+        </div>
+      </div>
+      <div class="systems-grid">
+        <article>
+          <h3>Lane Card Battle</h3>
+          <p>プロトコル・コアを守りながら、通貨カードをレーンに配置して敵コアを破壊する。</p>
+        </article>
+        <article>
+          <h3>Block Cultivation</h3>
+          <p>ブロック生成をモチーフにした育成導線。攻略義務ではなく、帰還後の緩衝材として機能する。</p>
+        </article>
+        <article>
+          <h3>Score & Evaluation</h3>
+          <p>戦闘結果はS/A/B/C評価として返り、次の進行条件や達成感へ接続される。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="music" class="content-section music section-frame">
+      <div class="music-visual">
+        <img src="assets/protocol-order-icon.jpeg" alt="Protocol Order glowing orbit logo" />
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+      </div>
+      <div class="music-copy">
+        <p class="eyebrow">Music</p>
+        <h2>音楽は、世界の暗号である。</h2>
+        <p>
+          BGMは単なる背景音ではなく、章構造、戦闘体験、儀式、物語上の回収を支える設計要素です。
+          ストーリー進行により楽曲を入手し、Musicsメニューで聴き返せる構成を想定しています。
+        </p>
+        <ul class="signal-list">
+          <li>Tonal / Modal / Chordalの音楽言語</li>
+          <li>共通モチーフによるブランド統一</li>
+          <li>物語・戦闘・都市導線と連動する自作BGM方針</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="release" class="content-section release">
+      <div class="section-heading compact">
+        <p class="eyebrow">Release Plan</p>
+        <h2>Steam向けに段階的な市場投入を予定。</h2>
+      </div>
+      <div class="release-specs" aria-label="Initial release scope">
+        <article class="release-spec-card">
+          <span>Languages</span>
+          <h3>初期リリース対応言語</h3>
+          <p>日本語 / 英語</p>
+        </article>
+        <article class="release-spec-card">
+          <span>Regions</span>
+          <h3>初期リリース配信予定国</h3>
+          <p>日本 / アメリカ</p>
+        </article>
+        <article class="release-spec-card">
+          <span>Operating Systems</span>
+          <h3>対応OS</h3>
+          <p>Windows / macOS</p>
+        </article>
+      </div>
+      <div class="timeline" aria-label="Release timeline">
+        <div class="timeline-item">
+          <span>2027 Feb</span>
+          <h3>Soft Launch</h3>
+          <p>Steam向け早期アクセス版を想定。フィードバックを正式版へ反映。</p>
+        </div>
+        <div class="timeline-item">
+          <span>2027 May</span>
+          <h3>v1.0 Release</h3>
+          <p>正式版リリース予定。対応OSはWindows / macOSを主対象。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section-frame">
+      <div>
+        <p class="eyebrow">Protocol Order</p>
+        <h2>修復せよ。検証せよ。秩序を取り戻せ。</h2>
+      </div>
+      <div class="cta-actions">
+        <button class="button primary is-disabled" type="button" disabled>Gameplay準備中</button>
+        <a class="button ghost" href="whitepaper.html">Whitepaper</a>
+        <a class="button ghost" href="http://x.com/ProtocolOrder" target="_blank" rel="noreferrer">Official X</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Protocol Order. All rights reserved.</p>
+    <p>Contact: <a href="mailto:protocolorderofficial@gmail.com">protocolorderofficial@gmail.com</a></p>
+    <p>Official X: <a href="http://x.com/ProtocolOrder" target="_blank" rel="noreferrer">http://x.com/ProtocolOrder</a> / <a href="whitepaper.html">Hashran Whitepaper</a></p>
+    <p class="footer-note">本サイトはティザー用の静的サイトです。掲載内容・リリース時期・仕様は開発状況により変更される場合があります。</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
